@@ -1,5 +1,11 @@
 #headerImage {
     width:12vw;
-    height:5vw;
-    object-fit: cover;
+    height:90%;
+    min-width:300px;
+    object-fit: none;
+}
+
+#header {
+    height:6vw;
+    min-height:90px;
 }
