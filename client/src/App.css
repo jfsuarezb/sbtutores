@@ -1,0 +1,24 @@
+.col {
+    padding:0px;
+}
+
+img {
+    height:100%;
+    object-fit: cover;
+}
+
+#communityHeader {
+    margin-left:3vw;
+    margin-top:6vw;
+    margin-right:3vw;
+    padding:3vw;
+    padding-bottom:0px;
+    margin-bottom:0px;
+    color:rgb(0, 146, 191);
+    border-top: 1px solid #ccc;
+    text-align:center;
+}
+
+.card {
+    border-width:0px;
+}

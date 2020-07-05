@@ -1,0 +1,36 @@
+#form {
+    background-color:rgb(0, 146, 191);
+    color:white;
+}
+
+#initialMessage {
+    text-align:center;
+    padding:5vw;
+    padding-bottom:1vw;
+}
+
+#offer {
+    color:yellow;
+}
+
+#dataForm {
+    padding-right:20vw;
+    padding-left: 20vw;
+    padding-bottom:5vw;
+    padding-top:1vw;
+}
+
+#instruction {
+    text-align:center;
+}
+
+#finalbutton {
+    background-color:rgb(255, 68, 0);
+}
+
+#finalmessage {
+    background-color:rgb(0, 146, 191);
+    color:white;
+    text-align:center;
+    padding:4vw;
+}

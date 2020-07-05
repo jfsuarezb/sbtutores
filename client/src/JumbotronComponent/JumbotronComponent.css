@@ -1,0 +1,17 @@
+.jumbotron {
+    background-color:rgb(0, 146, 191);
+    color:white;
+}
+.btn {
+    background-color:rgb(255, 68, 0);
+}
+
+.list-group-item {
+    background-color:rgb(255, 68, 0);
+    color:white;
+}
+
+#separator {
+    border:none;
+    height:1vw;
+}
