@@ -24,7 +24,11 @@ export default class Jumbotron extends React.Component {
 
     render() {
 
-        let subjectDisplay = (this.state.width > 580) ? {} : {display:'none'}    
+        let subjectDisplay = (this.state.width > 580) ? {} : {display:'none'};
+
+        let leadDisplay = (this.state.width > 580) ? {} : {display:'none'};
+
+        let smallDisplay = (this.state.width > 580) ? {display:'none'} : {};
 
         return (
             <div>
@@ -32,7 +36,12 @@ export default class Jumbotron extends React.Component {
                     <div className="container">
                         <h1 className="display-4">Líderes en tutorías desde matemáticas básicas hasta cálculo universitario</h1>
                         <hr className="my-4" />
-                        <p className="lead">9 de cada 10 estudiantes nuestros han mejorado sus calificaciones</p>
+                        <p className="lead" style={leadDisplay}>9 de cada 10 estudiantes nuestros han mejorado en sus calificaciones</p>
+                        <div style={smallDisplay}>
+                            <ul className="list-group list-group-horizontal-sm">
+                                <li className="list-group-item">9 de cada 10 estudiantes nuestros han mejorado en sus calificaciones</li>
+                            </ul>
+                        </div>
                         <div id="subjects" style={subjectDisplay}>
                             <ul className="list-group list-group-horizontal-sm">
                                 <li className="list-group-item">Aritmética</li>
