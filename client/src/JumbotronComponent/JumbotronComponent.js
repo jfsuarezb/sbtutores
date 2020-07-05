@@ -49,14 +49,14 @@ export default class Jumbotron extends React.Component {
                                 <li className="list-group-item">Álgebra I</li>
                                 <li className="list-group-item">Álgebra II</li>
                             </ul>
-                            <div id="separator"></div>
+                            <div className="separatorDiv"></div>
                             <ul className="list-group list-group-horizontal-sm">
                                 <li className="list-group-item">Funciones</li>
                                 <li className="list-group-item">Estadística</li>
                                 <li className="list-group-item">Probabilidad</li>
                                 <li className="list-group-item">Trigonometría</li>
                             </ul>
-                            <div id="separator"></div>
+                            <div className="separatorDiv"></div>
                             <ul className="list-group list-group-horizontal-sm">
                                 <li className="list-group-item">Cálculo Diferencial</li>
                                 <li className="list-group-item">Cálculo Integral</li>
