@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const jsonParser = require('body-parser').json();
 require('dotenv').config();
-const nodemailer = require('nodemailer');
+const mailgun = require("mailgun-js")({apiKey: process.env.API_KEY, domain: process.env.DOMAIN_NAME})
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -14,22 +14,14 @@ if (en === 'production') {
     app.use(express.static('client/build'));
 
     app.post('/mail',jsonParser,(req,res)=>{
-        const transporter = nodemailer.createTransport({
-            service:'gmail',
-            auth: {
-                user:process.env.EMAIL_USERNAME,
-                pass:process.env.EMAIL_PASSWORD
-            }
-        });
         
-        let mailOptions = {
-            from:process.env.EMAIL_USERNAME,
-            to:process.env.RECEIVING_EMAIL,
-            subject:'Nueva Tutoria!',
-            text:`Nombre: ${req.body.name}\nApellido: ${req.body.lastname}\nContacto: ${req.body.contact}\nMateria: ${req.body.subject}`
-        }
-        
-        transporter.sendMail(mailOptions);
+        const data = {
+            from: `Informer <mailgun@${process.env.DOMAIN_NAME}>`,
+            to: process.env.RECEIVER,
+            subject: "Nueva Tutoria!",
+            text: `Nombre: ${req.body.name}\nApellido: ${req.body.lastname}\nContacto: ${req.body.contact}\nMateria: ${req.body.subject}`
+        };
+
         res.sendStatus(200);
     });
     app.get('/',(req, res) => {
