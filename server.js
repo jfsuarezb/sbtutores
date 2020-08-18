@@ -22,6 +22,10 @@ if (en === 'production') {
             text: `Nombre: ${req.body.name}\nApellido: ${req.body.lastname}\nContacto: ${req.body.contact}\nMateria: ${req.body.subject}`
         };
 
+        mailgun.messages().send(data, (error, body) => {
+            console.log(body);
+        });
+
         res.sendStatus(200);
     });
     app.get('/',(req, res) => {
